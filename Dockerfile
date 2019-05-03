@@ -1,4 +1,4 @@
-FROM entrack/docker-alpine-s6-overlay:latest
+FROM entrack/docker-alpine-s6-overlay:alpine39
 MAINTAINER Michael Martin <mmartin@fuelingbrands.com>
 
 #----------------------------------------------------
@@ -10,7 +10,7 @@ MAINTAINER Michael Martin <mmartin@fuelingbrands.com>
 ##/
  # Install Nginx
  #/
-RUN apk --no-cache --update --repository=http://dl-4.alpinelinux.org/alpine/v3.5/community add \
+RUN apk --no-cache --update add \
     nginx
 
 ##/
